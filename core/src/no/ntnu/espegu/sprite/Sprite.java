@@ -2,17 +2,18 @@ package no.ntnu.espegu.sprite;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import java.util.UUID;
+import java.util.Random;
+
 
 public abstract class Sprite {
-    final UUID uuid;
+    final String id;
     float x;
     float y;
     float height;
     float width;
 
     public Sprite(float x, float y, float height, float width) {
-        uuid = UUID.randomUUID();
+        id = generateId();
         this.x = x;
         this.y = y;
         this.height = height;
@@ -21,7 +22,11 @@ public abstract class Sprite {
 
     public Sprite() {
         // Empty default constructor
-        uuid = UUID.randomUUID();
+        id = generateId();
+    }
+
+    private String generateId() {
+        return "" + new Random().nextInt();
     }
 
     abstract void update(Sprite... siblings);
@@ -44,8 +49,8 @@ public abstract class Sprite {
         this.x = x;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public String getId() {
+        return id;
     }
 
     public float getHeight() {

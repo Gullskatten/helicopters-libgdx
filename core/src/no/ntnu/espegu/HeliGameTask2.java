@@ -18,12 +18,13 @@ import no.ntnu.espegu.sprite.HelicopterSprite;
 
 public class HeliGameTask2 extends ApplicationAdapter implements InputProcessor {
 
-    private SpriteBatch batch;
     private boolean isDragging = false;
-    private HelicopterSprite helicopter;
     private float elapsedTime;
     private int dragX;
     private int dragY;
+
+    private SpriteBatch batch;
+    private HelicopterSprite helicopter;
     private BitmapFont font;
 
     @Override

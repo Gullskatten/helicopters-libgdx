@@ -68,7 +68,7 @@ public class HelicopterSprite extends Sprite {
             Rectangle hasCollidedWith = null;
 
             for (Sprite sibling : siblings) {
-                if (sibling.uuid != this.uuid) {
+                if (sibling.id != this.id) {
                     Rectangle siblingRect = new Rectangle(sibling.x, sibling.y, sibling.width, sibling.height);
                     if (thisRect.overlaps(siblingRect)) {
                         hasCollidedWith = siblingRect;

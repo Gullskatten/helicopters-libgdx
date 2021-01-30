@@ -17,7 +17,7 @@ public class HeliGameTask3 extends ApplicationAdapter {
 
     @Override
     public void create() {
-        int HELICOPTERS_AMOUNT = 5;
+        int HELICOPTERS_AMOUNT = 2;
 
         batch = new SpriteBatch();
         Random random = new Random();
